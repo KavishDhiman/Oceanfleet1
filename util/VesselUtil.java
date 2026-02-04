@@ -20,4 +20,15 @@ public class VesselUtil {
     public List<Vessel> getVesselList() {
         return vesselList;
     }
+    // UC3: get vessel by ID
+    public Vessel getVesselById(String vesselId) {
+
+        for (Vessel vessel : vesselList) {
+            if (vessel.getVesselId().equals(vesselId)) {
+                return vessel;
+            }
+        }
+        return null;
+    }
+
 }
